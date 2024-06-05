@@ -1,0 +1,26 @@
+.SearchCategory {
+  padding: 20px;
+}
+
+.CateContent {
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.ImgCate {
+  transition: transform 0.3s ease;
+}
+
+.ImgCate:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.ImgCate img {
+  width: 94%;
+  height: 100%;
+  border-radius: 10px;
+}

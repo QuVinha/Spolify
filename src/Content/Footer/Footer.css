@@ -1,0 +1,83 @@
+.Footer {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 19% 19% 19% 19% auto;
+  gap: 10px;
+  border-bottom: 0.5px solid;
+  border-bottom-color: #696969;
+}
+
+.CtFooter {
+  padding: 20px 10px 30px;
+}
+
+.CtFooter > div {
+  padding-top: 10px;
+}
+
+.CtFooter p {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.CtFooter a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #a9a9a9;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.CtFooter a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.CtFooterSocial {
+  padding: 30px 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+}
+
+.CtFooterSocial > div {
+  padding-top: 10px;
+}
+
+.CtFooterSocial i {
+  font-size: 30px;
+  color: #fff;
+}
+
+.CtFooterSocial i:hover {
+  transform: scale(1.2);
+  transition: transform 0.4s ease;
+}
+
+.Footer2 {
+  display: grid;
+  grid-template-columns: 8% 29% 22% 19% auto;
+  gap: 10px;
+}
+
+.CtFooter2 {
+  padding: 30px 10px;
+  font-size: 14px;
+}
+
+.CtFooter2 a {
+  color: #a9a9a9;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.CtFooter2 a:hover {
+  color: #fff;
+}
+
+.CtFooter2 p {
+  font-weight: 500;
+  font-size: 14px;
+  color: #a9a9a9;
+}

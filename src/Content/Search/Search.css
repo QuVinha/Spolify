@@ -1,0 +1,43 @@
+.SearchInput {
+  margin-top: 75px;
+  padding: 0 20px 0;
+  position: relative;
+  flex: 0 1 364px;
+}
+
+.SearchInput input {
+  height: 48px;
+  width: 35%;
+  border-radius: 500px;
+  padding: 6px 42px;
+  background-color: #242424;
+  border: none;
+}
+
+.IconSearchInput {
+  bottom: 0;
+  display: flex;
+  left: 36px;
+  position: absolute;
+  top: 0;
+  align-items: center;
+}
+
+.IconSearchInput i {
+  color: #b3b3b3;
+}
+
+.fa-magnifying-glass.focused {
+  color: #fff; /* Màu của icon khi input được focus */
+}
+
+.input-focused {
+  caret-color: #fff;
+  color: #fff; /* Thay đổi màu của dấu nháy (caret) thành màu trắng */
+}
+
+.TitleSearch {
+  padding: 30px 20px 0;
+  font-size: 12px;
+  letter-spacing: -1px;
+}

@@ -1,0 +1,26 @@
+.Artist {
+  padding: 70px 20px 0;
+}
+
+.VerificationArtist {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.IconVer {
+  height: 27px;
+}
+
+.IconVer img {
+  width: 100%;
+  height: 100%;
+}
+
+.NameArtist h1 {
+  font-size: 95px;
+}
+
+.MonthlyListeners {
+}

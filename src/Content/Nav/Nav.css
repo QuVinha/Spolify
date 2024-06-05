@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.ContentLeft {
+  width: 365px;
+}
+
+.LibraryContent {
+  transition: overflow-y 0.3s ease;
+  max-height: 450px; /* Định kích thước tối đa cho phần tử */
+  overflow-y: hidden; /* Hiển thị thanh cuộn khi nội dung vượt quá kích thước tối đa */
+}
+
+.LibraryContent:hover {
+  overflow-y: auto; /* Hiển thị thanh cuộn khi đưa chuột vào */
+}
+
+.LibraryContent::-webkit-scrollbar {
+  width: 2px; /* Độ rộng của thanh cuộn */
+}
+
+.LibraryContent::-webkit-scrollbar-thumb {
+  background-color: #222222; /* Màu của thanh cuộn */
+  border-radius: 4px; /* Độ cong viền của thanh cuộn */
+}
+
+.LiContent {
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.FavoriteSong {
+  display: flex;
+  gap: 20px;
+  padding: 8px 12px;
+  align-items: center;
+}
+
+.FavoriteLeft {
+}
+
+.ImgFavoriteSong {
+  height: 48px;
+}
+
+.ImgFavoriteSong img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.NameFSong {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ActorFSong {
+  font-size: 14px;
+  color: #a9a9a9;
+}
+
+.LiContent:hover {
+  background-color: rgba(68, 68, 68, 0.5);
+}
+
+.Search {
+  padding: 8px 12px;
+  font-size: 15px;
+  background-color: #121212;
+  border-radius: 8px;
+}
+
+.Search1 {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 4px 12px;
+  height: 45px;
+  color: #b3b3b3;
+  font-size: 15px;
+}
+
+.Search2 {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 4px 12px;
+  height: 45px;
+  color: #b3b3b3;
+}
+
+.Search1:hover {
+  color: #fff;
+}
+
+.Search2:hover {
+  color: #fff;
+}
+
+.SearchP p {
+  font-weight: 700;
+}
+
+.Library {
+  margin-top: 10px;
+  padding: 8px 8px;
+  font-size: 17px;
+  background-color: #121212;
+  border-radius: 8px;
+}

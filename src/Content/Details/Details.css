@@ -1,0 +1,245 @@
+.DetailsTilte {
+  padding: 120px 0 40px;
+}
+
+.ContentDTitle {
+  padding-left: 18px;
+  display: flex;
+  align-items: end;
+}
+
+.ImgDTitle {
+  width: 150px;
+}
+
+.ImgDTitle img {
+  width: 100%;
+  height: 100%;
+}
+
+.NameDTitle {
+  padding-left: 15px;
+  font-weight: 700;
+}
+
+.NameDTitle p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.NameDTitle h1 {
+  font-size: 47px;
+  letter-spacing: -1px;
+}
+
+.DetailsPlay {
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.DetailsPlayIcon {
+  cursor: pointer;
+  width: 95px;
+}
+
+.DetailsPlayIcon img {
+  width: 100%;
+  height: 100%;
+}
+
+.IconPlayD {
+  transition: transform 0.3s ease; /* Thời gian và kiểu làm mượt cho hiệu ứng */
+}
+
+.IconPlayD:hover {
+  transform: scale(1.1); /* Phóng to ảnh lên 1.1 lần khi hover */
+}
+
+.DetailsPlayPlus {
+  padding-left: 10px;
+}
+
+.DetailsPlayPlus i {
+  cursor: pointer;
+  font-size: 30px;
+  color: #b3b3b3;
+}
+
+.DetailsPlayPlus i:hover {
+  color: #fff;
+}
+
+.DetailsPlayDots {
+  padding-left: 25px;
+}
+
+.DetailsPlayDots i {
+  cursor: pointer;
+  font-size: 30px;
+  color: #b3b3b3;
+}
+
+.DetailsPlayDots i:hover {
+  color: #fff;
+}
+
+.DetailsPropose {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.DetailsPropose h1 {
+  font-size: 25px;
+}
+
+.DetailsPropose p {
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.MusicPropose {
+  padding: 20px;
+}
+
+.BigMusicPro {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 60% 30% auto;
+  gap: 10px;
+  border-radius: 5px;
+}
+
+.BigMusicPro:hover {
+  cursor: pointer;
+  background-color: rgba(68, 68, 68, 0.5);
+}
+
+.SongsPro {
+  display: flex;
+  gap: 20px;
+  padding: 8px 12px;
+  align-items: center;
+}
+
+.SongsImg {
+  height: 48px;
+}
+
+.SongsImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.NameSongPro {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ActorSongPro {
+  font-size: 14px;
+  color: #a9a9a9;
+}
+
+.ViewTimeProS p {
+  font-size: 14px;
+  color: #a9a9a9;
+}
+
+.DetailsFooter {
+  padding: 0 20px;
+  height: 12;
+}
+
+.TitleDetails {
+  padding: 20px;
+}
+
+.TilteDT h1 {
+  font-size: 21px;
+}
+
+.MusicProsperity {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.SongsProsperity {
+  padding: 10px;
+  width: 185px;
+  border-radius: 5px;
+}
+
+.SongsProsperity:hover {
+  cursor: pointer;
+  background-color: rgba(68, 68, 68, 0.2);
+}
+
+.SongsProsperityImg {
+  width: 170px;
+}
+
+.SongsProsperityImg img {
+  border-radius: 5px;
+  width: 98%;
+  height: 100%;
+}
+
+.NameSongProsperity {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ActorSongProsperity {
+  font-size: 14px;
+  padding-top: 6px;
+  padding-bottom: 10px;
+  color: #a9a9a9;
+}
+
+.AnotherArtist {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.AnotherArtistA {
+  padding: 10px;
+  width: 185px;
+  border-radius: 5px;
+}
+
+.AnotherArtistA:hover {
+  cursor: pointer;
+  background-color: rgba(68, 68, 68, 0.2);
+}
+
+.AnotherArtistImg {
+  width: 170px;
+}
+
+.AnotherArtistImg img {
+  border-radius: 80px;
+  width: 98%;
+  height: 100%;
+}
+
+.NameAnotherArtist {
+  padding-top: 6px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ActorAnotherArtist {
+  font-size: 14px;
+  padding-top: 6px;
+  color: #a9a9a9;
+}
