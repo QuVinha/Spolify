@@ -1,6 +1,8 @@
 import "./Nav.css";
 import Search from "../Search/Search";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import APIKit from "../../Content/Spolify/Spolify.js";
 import ImgPhatGan6 from "../../assets/img/ImgContentFY/PhatGan6.png";
 import ImgPhatGan7 from "../../assets/img/ImgContentFY/PhatGan7.png";
 import ImgPhatGan9 from "../../assets/img/ImgContentFY/PhatGan9.png";
@@ -21,8 +23,31 @@ const Nav = () => {
     navigate("/search");
   };
 
+  const [playlists, setPlaylists] = useState(null);
+
+  // RANDOM 4 bai hat trong playlist
+  const getRandomIndices = (max, count) => {
+    const indices = [];
+    while (indices.length < count) {
+      const randomIndex = Math.floor(Math.random() * max);
+      if (!indices.includes(randomIndex)) {
+        indices.push(randomIndex);
+      }
+    }
+    return indices;
+  };
+
+  useEffect(() => {
+    APIKit.get("me/playlists").then(function (response) {
+      const playlists = response.data.items;
+      const randomIndices = getRandomIndices(playlists.length, 15);
+      const randomPlaylists = randomIndices.map((index) => playlists[index]);
+      setPlaylists(randomPlaylists);
+    });
+  }, []);
+
   return (
-    <div>
+    <div style={{ height: "540px" }}>
       <div className="ContentLeft">
         <ul className="Search">
           <li onClick={handleNavigate} className="Search1">
@@ -57,173 +82,27 @@ const Nav = () => {
           </div>
 
           <div className="LibraryContent">
-            <div className="LiContent">
-              <div className="FavoriteSong">
-                <div className="FavoriteLeft">
-                  <div className="ImgFavoriteSong">
-                    <img src={ImgPhatGan6} alt="" />
-                  </div>
-                </div>
-
-                <div className="FavoriteRight">
-                  <div className="Name&ActorSong">
-                    <div className="NameFSong">
-                      <p>Kể cho tôi nghe</p>
-                    </div>
-                    <div className="ActorFSong">
-                      <p>Radio Giữ Kỉ Niệm</p>
+            {playlists?.map((playlist) => (
+              <div className="LiContent" key={playlist.id}>
+                <div className="FavoriteSong">
+                  <div className="FavoriteLeft">
+                    <div className="ImgFavoriteSong">
+                      <img src={playlist.images[0]?.url} alt={playlist.name} />
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="LiContent">
-              <div className="FavoriteSong">
-                <div className="FavoriteLeft">
-                  <div className="ImgFavoriteSong">
-                    <img src={ImgPhatGan7} alt="" />
-                  </div>
-                </div>
-
-                <div className="FavoriteRight">
-                  <div className="Name&ActorSong">
-                    <div className="NameFSong">
-                      <p>Tree ở đây</p>
-                    </div>
-                    <div className="ActorFSong">
-                      <p>Thuỳ Tree</p>
+                  <div className="FavoriteRight">
+                    <div className="Name&ActorSong">
+                      <div className="NameFSong">
+                        <p>{playlist.name}</p>
+                      </div>
+                      <div className="ActorFSong">
+                        {/* <p>{playlist.owner.display_name}</p> */}
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="LiContent">
-              <div className="FavoriteSong">
-                <div className="FavoriteLeft">
-                  <div className="ImgFavoriteSong">
-                    <img src={ImgPhatGan9} alt="" />
-                  </div>
-                </div>
-
-                <div className="FavoriteRight">
-                  <div className="Name&ActorSong">
-                    <div className="NameFSong">
-                      <p>0 ai nghĩ</p>
-                    </div>
-                    <div className="ActorFSong">
-                      <p>Wxrdie</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="LiContent">
-              <div className="FavoriteSong">
-                <div className="FavoriteLeft">
-                  <div className="ImgFavoriteSong">
-                    <img src={ImgPhatGan10} alt="" />
-                  </div>
-                </div>
-
-                <div className="FavoriteRight">
-                  <div className="Name&ActorSong">
-                    <div className="NameFSong">
-                      <p>99%</p>
-                    </div>
-                    <div className="ActorFSong">
-                      <p>MCK - aka Nger</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="LiContent">
-              <div className="FavoriteSong">
-                <div className="FavoriteLeft">
-                  <div className="ImgFavoriteSong">
-                    <img src={ImgContentFy7} alt="" />
-                  </div>
-                </div>
-
-                <div className="FavoriteRight">
-                  <div className="Name&ActorSong">
-                    <div className="NameFSong">
-                      <p>Viết Chữa Lành</p>
-                    </div>
-                    <div className="ActorFSong">
-                      <p>Uriting theraphy</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="LiContent">
-              <div className="FavoriteSong">
-                <div className="FavoriteLeft">
-                  <div className="ImgFavoriteSong">
-                    <img src={ImgContentFy9} alt="" />
-                  </div>
-                </div>
-
-                <div className="FavoriteRight">
-                  <div className="Name&ActorSong">
-                    <div className="NameFSong">
-                      <p>Mây kể chuyện</p>
-                    </div>
-                    <div className="ActorFSong">
-                      <p>M.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="LiContent">
-              <div className="FavoriteSong">
-                <div className="FavoriteLeft">
-                  <div className="ImgFavoriteSong">
-                    <img src={ImgContentFy4} alt="" />
-                  </div>
-                </div>
-
-                <div className="FavoriteRight">
-                  <div className="Name&ActorSong">
-                    <div className="NameFSong">
-                      <p>Thuần</p>
-                    </div>
-                    <div className="ActorFSong">
-                      <p>Thuần - Podcast</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="LiContent">
-              <div className="FavoriteSong">
-                <div className="FavoriteLeft">
-                  <div className="ImgFavoriteSong">
-                    <img src={ImgPhatGan11} alt="" />
-                  </div>
-                </div>
-
-                <div className="FavoriteRight">
-                  <div className="Name&ActorSong">
-                    <div className="NameFSong">
-                      <p>GOLDEN</p>
-                    </div>
-                    <div className="ActorFSong">
-                      <p>Jung Kook</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

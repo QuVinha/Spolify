@@ -1,0 +1,37 @@
+.Playing-Bar {
+  color: #fff;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 25% 50% 25%;
+  gap: 10px;
+}
+
+.ContentPlaying-Bar {
+  padding: 0 10px;
+}
+
+.SongI4-Playing-Bar {
+  display: flex;
+  align-items: center;
+}
+
+.SongI4-Img {
+  padding: 15px 15px;
+  height: 90px;
+  width: 90px;
+}
+
+.SongI4-Img img {
+  height: 100%;
+  border-radius: 5px;
+}
+
+.SongI4-Name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.SongI4-Actors {
+  font-size: 14px;
+  color: #a9a9a9;
+}

@@ -4,6 +4,7 @@ import Nav from "../Nav/Nav";
 import Header from "../HeaderContent/Header";
 import Footer from "../Footer/Footer";
 import "./Artist.css";
+import PlayingBar from "../PlayingBar/PlayingBar.js";
 import TichXanh from "../../assets/img/Icon/checklist.png";
 import BGObito from "../../assets/img/BG-Obito.jpeg";
 import IconPlayD from "../../assets/img/Icon/IconPlayD.png";
@@ -48,560 +49,565 @@ const Artist = () => {
 
   return (
     <div id="main">
-      <Nav />
-      <div className="ContentRight">
-        <Header className={isHeaderFixed ? "FixedHeader" : ""} />
-        <div
-          style={{
-            backgroundImage: `url(${BGObito})`,
-          }}
-          className="Artist"
-        >
-          <div className="VerificationArtist">
-            <div className="IconVer">
-              <img src={TichXanh} alt="" />
+      <div className="ContentHome">
+        <Nav />
+        <div className="ContentRight">
+          <Header className={isHeaderFixed ? "FixedHeader" : ""} />
+          <div
+            style={{
+              backgroundImage: `url(${BGObito})`,
+            }}
+            className="Artist"
+          >
+            <div className="VerificationArtist">
+              <div className="IconVer">
+                <img src={TichXanh} alt="" />
+              </div>
+              <div>
+                <p>Nghệ sĩ được xác minh</p>
+              </div>
             </div>
-            <div>
-              <p>Nghệ sĩ được xác minh</p>
+            <div className="NameArtist">
+              <h1>Obito</h1>
             </div>
-          </div>
-          <div className="NameArtist">
-            <h1>Obito</h1>
-          </div>
-          <div className="MonthlyListeners">
-            <p>1.111.341 người nghe hằng tháng</p>
-          </div>
-
-          <div className="DetailsPlay">
-            <div className="DetailsPlayIcon">
-              <img className="IconPlayD" src={IconPlayD} alt="" />
+            <div className="MonthlyListeners">
+              <p>1.111.341 người nghe hằng tháng</p>
             </div>
 
-            <div className="DetailsPlayPlus">
-              <i class="fa-regular fa-square-plus"></i>
-            </div>
+            <div className="DetailsPlay">
+              <div className="DetailsPlayIcon">
+                <img className="IconPlayD" src={IconPlayD} alt="" />
+              </div>
 
-            <div className="DetailsPlayDots">
-              <i class="fa-solid fa-ellipsis"></i>
+              <div className="DetailsPlayPlus">
+                <i class="fa-regular fa-square-plus"></i>
+              </div>
+
+              <div className="DetailsPlayDots">
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="DetailsPropose">
-          <h1>Phổ biến</h1>
-        </div>
-        <div className="MusicPropose">
-          <div className="BigMusicPro">
-            <div className="SongsPro">
-              <div className="SongsImg">
+          <div className="DetailsPropose">
+            <h1>Phổ biến</h1>
+          </div>
+          <div className="MusicPropose">
+            <div className="BigMusicPro">
+              <div className="SongsPro">
+                <div className="SongsImg">
+                  <img src={KhongTheSay} alt="" />
+                </div>
+
+                <div className="SongsName">
+                  <div className="Name&ActorSongPro">
+                    <div className="NameSongPro">
+                      <p>Không Thể Say</p>
+                    </div>
+                    <div className="ActorSongPro">
+                      <p>HIEUTHUHAI</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="ViewTimeProS">
+                <p>30.224.615</p>
+              </div>
+
+              <div style={{}} className="ViewTimeProS">
+                <p>3:08</p>
+              </div>
+            </div>
+
+            <div className="BigMusicPro">
+              <div className="SongsPro">
+                <div className="SongsImg">
+                  <img src={NguMotMinh} alt="" />
+                </div>
+
+                <div className="SongsName">
+                  <div className="Name&ActorSongPro">
+                    <div className="NameSongPro">
+                      <p>Ngủ một mình (tình rất tình)</p>
+                    </div>
+                    <div className="ActorSongPro">
+                      <p>HIEUTHUHAI,Negav,Kewtiie</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="ViewTimeProS">
+                <p>25.192.962</p>
+              </div>
+
+              <div className="ViewTimeProS">
+                <p>3:12</p>
+              </div>
+            </div>
+
+            <div className="BigMusicPro">
+              <div className="SongsPro">
+                <div className="SongsImg">
+                  <img src={HenGapDuoiAT} alt="" />
+                </div>
+
+                <div className="SongsName">
+                  <div className="Name&ActorSongPro">
+                    <div className="NameSongPro">
+                      <p>Hẹn Gặp Em Dưới Ánh Trăng</p>
+                    </div>
+                    <div className="ActorSongPro">
+                      <p>MANBO,HIEUTHUHAI,HURRYKNG</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="ViewTimeProS">
+                <p>15.245.132</p>
+              </div>
+
+              <div className="ViewTimeProS">
+                <p>3:42</p>
+              </div>
+            </div>
+
+            <div className="BigMusicPro">
+              <div className="SongsPro">
+                <div className="SongsImg">
+                  <img src={Mamma} alt="" />
+                </div>
+
+                <div className="SongsName">
+                  <div className="Name&ActorSongPro">
+                    <div className="NameSongPro">
+                      <p>Mamma Mia</p>
+                    </div>
+                    <div className="ActorSongPro">
+                      <p>HIEUTHUHAI,HURRYKNG,MANBO</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="ViewTimeProS">
+                <p>26.282.154</p>
+              </div>
+
+              <div className="ViewTimeProS">
+                <p>3:53</p>
+              </div>
+            </div>
+
+            <div className="BigMusicPro">
+              <div className="SongsPro">
+                <div className="SongsImg">
+                  <img src={NgheNhuTinhYeu} alt="" />
+                </div>
+
+                <div className="SongsName">
+                  <div className="Name&ActorSongPro">
+                    <div className="NameSongPro">
+                      <p>Nghe Như Tình Yêu</p>
+                    </div>
+                    <div className="ActorSongPro">
+                      <p>HIEUTHUHAI</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="ViewTimeProS">
+                <p>20.182.854</p>
+              </div>
+
+              <div className="ViewTimeProS">
+                <p>3:13</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="TitleDetails">
+            <div className="TilteDT">
+              <h1>Các bản phát hành thịnh hành của HIEUTHUHAI</h1>
+            </div>
+          </div>
+
+          <div className="MusicProsperity">
+            <div className="SongsProsperity">
+              <div className="SongsProsperityImg">
                 <img src={KhongTheSay} alt="" />
               </div>
 
-              <div className="SongsName">
-                <div className="Name&ActorSongPro">
-                  <div className="NameSongPro">
+              <div className="SongsProsperityName">
+                <div className="Name&ActorSongProsperity">
+                  <div className="NameSongProsperity">
                     <p>Không Thể Say</p>
                   </div>
-                  <div className="ActorSongPro">
+                  <div className="ActorSongProsperity">
                     <p>HIEUTHUHAI</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="ViewTimeProS">
-              <p>30.224.615</p>
-            </div>
-
-            <div style={{}} className="ViewTimeProS">
-              <p>3:08</p>
-            </div>
-          </div>
-
-          <div className="BigMusicPro">
-            <div className="SongsPro">
-              <div className="SongsImg">
+            <div className="SongsProsperity">
+              <div className="SongsProsperityImg">
                 <img src={NguMotMinh} alt="" />
               </div>
 
-              <div className="SongsName">
-                <div className="Name&ActorSongPro">
-                  <div className="NameSongPro">
-                    <p>Ngủ một mình (tình rất tình)</p>
+              <div className="SongsProsperityName">
+                <div className="Name&ActorSongProsperity">
+                  <div className="NameSongProsperity">
+                    <p>Ngủ một mình</p>
                   </div>
-                  <div className="ActorSongPro">
-                    <p>HIEUTHUHAI,Negav,Kewtiie</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="ViewTimeProS">
-              <p>25.192.962</p>
-            </div>
-
-            <div className="ViewTimeProS">
-              <p>3:12</p>
-            </div>
-          </div>
-
-          <div className="BigMusicPro">
-            <div className="SongsPro">
-              <div className="SongsImg">
-                <img src={HenGapDuoiAT} alt="" />
-              </div>
-
-              <div className="SongsName">
-                <div className="Name&ActorSongPro">
-                  <div className="NameSongPro">
-                    <p>Hẹn Gặp Em Dưới Ánh Trăng</p>
-                  </div>
-                  <div className="ActorSongPro">
-                    <p>MANBO,HIEUTHUHAI,HURRYKNG</p>
+                  <div className="ActorSongProsperity">
+                    <p>HIEUTHUHAI,Negav</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="ViewTimeProS">
-              <p>15.245.132</p>
-            </div>
-
-            <div className="ViewTimeProS">
-              <p>3:42</p>
-            </div>
-          </div>
-
-          <div className="BigMusicPro">
-            <div className="SongsPro">
-              <div className="SongsImg">
-                <img src={Mamma} alt="" />
-              </div>
-
-              <div className="SongsName">
-                <div className="Name&ActorSongPro">
-                  <div className="NameSongPro">
-                    <p>Mamma Mia</p>
-                  </div>
-                  <div className="ActorSongPro">
-                    <p>HIEUTHUHAI,HURRYKNG,MANBO</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="ViewTimeProS">
-              <p>26.282.154</p>
-            </div>
-
-            <div className="ViewTimeProS">
-              <p>3:53</p>
-            </div>
-          </div>
-
-          <div className="BigMusicPro">
-            <div className="SongsPro">
-              <div className="SongsImg">
+            <div className="SongsProsperity">
+              <div className="SongsProsperityImg">
                 <img src={NgheNhuTinhYeu} alt="" />
               </div>
 
-              <div className="SongsName">
-                <div className="Name&ActorSongPro">
-                  <div className="NameSongPro">
+              <div className="SongsProsperityName">
+                <div className="Name&ActorSongProsperity">
+                  <div className="NameSongProsperity">
                     <p>Nghe Như Tình Yêu</p>
                   </div>
-                  <div className="ActorSongPro">
+                  <div className="ActorSongProsperity">
                     <p>HIEUTHUHAI</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="ViewTimeProS">
-              <p>20.182.854</p>
+            <div className="SongsProsperity">
+              <div className="SongsProsperityImg">
+                <img src={HieuThu2} alt="" />
+              </div>
+
+              <div className="SongsProsperityName">
+                <div className="Name&ActorSongProsperity">
+                  <div className="NameSongProsperity">
+                    <p>Ai Cũng Phải Bắt Đ..</p>
+                  </div>
+                  <div className="ActorSongProsperity">
+                    <p>HIEUTHUHAI</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="ViewTimeProS">
-              <p>3:13</p>
+            <div className="SongsProsperity">
+              <div className="SongsProsperityImg">
+                <img src={HenGapDuoiAT} alt="" />
+              </div>
+
+              <div className="SongsProsperityName">
+                <div className="Name&ActorSongProsperity">
+                  <div className="NameSongProsperity">
+                    <p>Hẹn Gặp Dưới Ánh..</p>
+                  </div>
+                  <div className="ActorSongProsperity">
+                    <p>HIEUTHUHAI</p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div className="TitleDetails">
+            <div className="TilteDT">
+              <h1>Các bản phát hành thịnh hành của HIEUTHUHAI</h1>
+            </div>
+          </div>
+
+          <div className="MusicProsperity">
+            <div className="SongsProsperity">
+              <div className="SongsProsperityImg">
+                <img src={KhongTheSay} alt="" />
+              </div>
+
+              <div className="SongsProsperityName">
+                <div className="Name&ActorSongProsperity">
+                  <div className="NameSongProsperity">
+                    <p>Không Thể Say</p>
+                  </div>
+                  <div className="ActorSongProsperity">
+                    <p>HIEUTHUHAI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="SongsProsperity">
+              <div className="SongsProsperityImg">
+                <img src={NguMotMinh} alt="" />
+              </div>
+
+              <div className="SongsProsperityName">
+                <div className="Name&ActorSongProsperity">
+                  <div className="NameSongProsperity">
+                    <p>Ngủ một mình</p>
+                  </div>
+                  <div className="ActorSongProsperity">
+                    <p>HIEUTHUHAI,Negav</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="SongsProsperity">
+              <div className="SongsProsperityImg">
+                <img src={NgheNhuTinhYeu} alt="" />
+              </div>
+
+              <div className="SongsProsperityName">
+                <div className="Name&ActorSongProsperity">
+                  <div className="NameSongProsperity">
+                    <p>Nghe Như Tình Yêu</p>
+                  </div>
+                  <div className="ActorSongProsperity">
+                    <p>HIEUTHUHAI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="SongsProsperity">
+              <div className="SongsProsperityImg">
+                <img src={HieuThu2} alt="" />
+              </div>
+
+              <div className="SongsProsperityName">
+                <div className="Name&ActorSongProsperity">
+                  <div className="NameSongProsperity">
+                    <p>Ai Cũng Phải Bắt Đ..</p>
+                  </div>
+                  <div className="ActorSongProsperity">
+                    <p>HIEUTHUHAI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="SongsProsperity">
+              <div className="SongsProsperityImg">
+                <img src={HenGapDuoiAT} alt="" />
+              </div>
+
+              <div className="SongsProsperityName">
+                <div className="Name&ActorSongProsperity">
+                  <div className="NameSongProsperity">
+                    <p>Hẹn Gặp Dưới Ánh..</p>
+                  </div>
+                  <div className="ActorSongProsperity">
+                    <p>HIEUTHUHAI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="TitleDetails">
+            <div className="TilteDT">
+              <h1>Fan cũng thích</h1>
+            </div>
+          </div>
+
+          <div className="AnotherArtist">
+            <div className="AnotherArtistA">
+              <div className="AnotherArtistImg">
+                <img src={Andree} alt="" />
+              </div>
+
+              <div className="AnotherArtistName">
+                <div className="Name&ActorAnotherArtist">
+                  <div className="NameAnotherArtist">
+                    <p>Andree Right Hand</p>
+                  </div>
+                  <div className="ActorAnotherArtist">
+                    <p>Nghệ sĩ</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="AnotherArtistA">
+              <div className="AnotherArtistImg">
+                <img src={WokeUp} alt="" />
+              </div>
+
+              <div className="AnotherArtistName">
+                <div className="Name&ActorAnotherArtist">
+                  <div className="NameAnotherArtist">
+                    <p>WOKEUP</p>
+                  </div>
+                  <div className="ActorAnotherArtist">
+                    <p>Nghệ sĩ</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="AnotherArtistA">
+              <div className="AnotherArtistImg">
+                <img src={Pliz} alt="" />
+              </div>
+
+              <div className="AnotherArtistName">
+                <div className="Name&ActorAnotherArtist">
+                  <div className="NameAnotherArtist">
+                    <p>2pillz</p>
+                  </div>
+                  <div className="ActorAnotherArtist">
+                    <p>Nghệ sĩ</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div onClick={handleNavigate} className="AnotherArtistA">
+              <div className="AnotherArtistImg">
+                <img src={ObitoA} alt="" />
+              </div>
+
+              <div className="AnotherArtistName">
+                <div className="Name&ActorAnotherArtist">
+                  <div className="NameAnotherArtist">
+                    <p>Obito</p>
+                  </div>
+                  <div className="ActorAnotherArtist">
+                    <p>Nghệ sĩ</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="AnotherArtistA">
+              <div className="AnotherArtistImg">
+                <img src={Rhyder} alt="" />
+              </div>
+
+              <div className="AnotherArtistName">
+                <div className="Name&ActorAnotherArtist">
+                  <div className="NameAnotherArtist">
+                    <p>Rhyder</p>
+                  </div>
+                  <div className="ActorAnotherArtist">
+                    <p>Nghệ sĩ</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="TitleDetails">
+            <div className="TilteDT">
+              <h1>Các bản phát hành thịnh hành của HIEUTHUHAI</h1>
+            </div>
+          </div>
+
+          <div className="MusicProsperity">
+            <div className="SongsProsperity">
+              <div className="SongsProsperityImg">
+                <img src={KhongTheSay} alt="" />
+              </div>
+
+              <div className="SongsProsperityName">
+                <div className="Name&ActorSongProsperity">
+                  <div className="NameSongProsperity">
+                    <p>Không Thể Say</p>
+                  </div>
+                  <div className="ActorSongProsperity">
+                    <p>HIEUTHUHAI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="SongsProsperity">
+              <div className="SongsProsperityImg">
+                <img src={NguMotMinh} alt="" />
+              </div>
+
+              <div className="SongsProsperityName">
+                <div className="Name&ActorSongProsperity">
+                  <div className="NameSongProsperity">
+                    <p>Ngủ một mình</p>
+                  </div>
+                  <div className="ActorSongProsperity">
+                    <p>HIEUTHUHAI,Negav</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="SongsProsperity">
+              <div className="SongsProsperityImg">
+                <img src={NgheNhuTinhYeu} alt="" />
+              </div>
+
+              <div className="SongsProsperityName">
+                <div className="Name&ActorSongProsperity">
+                  <div className="NameSongProsperity">
+                    <p>Nghe Như Tình Yêu</p>
+                  </div>
+                  <div className="ActorSongProsperity">
+                    <p>HIEUTHUHAI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="SongsProsperity">
+              <div className="SongsProsperityImg">
+                <img src={HieuThu2} alt="" />
+              </div>
+
+              <div className="SongsProsperityName">
+                <div className="Name&ActorSongProsperity">
+                  <div className="NameSongProsperity">
+                    <p>Ai Cũng Phải Bắt Đ..</p>
+                  </div>
+                  <div className="ActorSongProsperity">
+                    <p>HIEUTHUHAI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="SongsProsperity">
+              <div className="SongsProsperityImg">
+                <img src={HenGapDuoiAT} alt="" />
+              </div>
+
+              <div className="SongsProsperityName">
+                <div className="Name&ActorSongProsperity">
+                  <div className="NameSongProsperity">
+                    <p>Hẹn Gặp Dưới Ánh..</p>
+                  </div>
+                  <div className="ActorSongProsperity">
+                    <p>HIEUTHUHAI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="DetailsFooter">
+            <Footer />
           </div>
         </div>
-
-        <div className="TitleDetails">
-          <div className="TilteDT">
-            <h1>Các bản phát hành thịnh hành của HIEUTHUHAI</h1>
-          </div>
-        </div>
-
-        <div className="MusicProsperity">
-          <div className="SongsProsperity">
-            <div className="SongsProsperityImg">
-              <img src={KhongTheSay} alt="" />
-            </div>
-
-            <div className="SongsProsperityName">
-              <div className="Name&ActorSongProsperity">
-                <div className="NameSongProsperity">
-                  <p>Không Thể Say</p>
-                </div>
-                <div className="ActorSongProsperity">
-                  <p>HIEUTHUHAI</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="SongsProsperity">
-            <div className="SongsProsperityImg">
-              <img src={NguMotMinh} alt="" />
-            </div>
-
-            <div className="SongsProsperityName">
-              <div className="Name&ActorSongProsperity">
-                <div className="NameSongProsperity">
-                  <p>Ngủ một mình</p>
-                </div>
-                <div className="ActorSongProsperity">
-                  <p>HIEUTHUHAI,Negav</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="SongsProsperity">
-            <div className="SongsProsperityImg">
-              <img src={NgheNhuTinhYeu} alt="" />
-            </div>
-
-            <div className="SongsProsperityName">
-              <div className="Name&ActorSongProsperity">
-                <div className="NameSongProsperity">
-                  <p>Nghe Như Tình Yêu</p>
-                </div>
-                <div className="ActorSongProsperity">
-                  <p>HIEUTHUHAI</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="SongsProsperity">
-            <div className="SongsProsperityImg">
-              <img src={HieuThu2} alt="" />
-            </div>
-
-            <div className="SongsProsperityName">
-              <div className="Name&ActorSongProsperity">
-                <div className="NameSongProsperity">
-                  <p>Ai Cũng Phải Bắt Đ..</p>
-                </div>
-                <div className="ActorSongProsperity">
-                  <p>HIEUTHUHAI</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="SongsProsperity">
-            <div className="SongsProsperityImg">
-              <img src={HenGapDuoiAT} alt="" />
-            </div>
-
-            <div className="SongsProsperityName">
-              <div className="Name&ActorSongProsperity">
-                <div className="NameSongProsperity">
-                  <p>Hẹn Gặp Dưới Ánh..</p>
-                </div>
-                <div className="ActorSongProsperity">
-                  <p>HIEUTHUHAI</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="TitleDetails">
-          <div className="TilteDT">
-            <h1>Các bản phát hành thịnh hành của HIEUTHUHAI</h1>
-          </div>
-        </div>
-
-        <div className="MusicProsperity">
-          <div className="SongsProsperity">
-            <div className="SongsProsperityImg">
-              <img src={KhongTheSay} alt="" />
-            </div>
-
-            <div className="SongsProsperityName">
-              <div className="Name&ActorSongProsperity">
-                <div className="NameSongProsperity">
-                  <p>Không Thể Say</p>
-                </div>
-                <div className="ActorSongProsperity">
-                  <p>HIEUTHUHAI</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="SongsProsperity">
-            <div className="SongsProsperityImg">
-              <img src={NguMotMinh} alt="" />
-            </div>
-
-            <div className="SongsProsperityName">
-              <div className="Name&ActorSongProsperity">
-                <div className="NameSongProsperity">
-                  <p>Ngủ một mình</p>
-                </div>
-                <div className="ActorSongProsperity">
-                  <p>HIEUTHUHAI,Negav</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="SongsProsperity">
-            <div className="SongsProsperityImg">
-              <img src={NgheNhuTinhYeu} alt="" />
-            </div>
-
-            <div className="SongsProsperityName">
-              <div className="Name&ActorSongProsperity">
-                <div className="NameSongProsperity">
-                  <p>Nghe Như Tình Yêu</p>
-                </div>
-                <div className="ActorSongProsperity">
-                  <p>HIEUTHUHAI</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="SongsProsperity">
-            <div className="SongsProsperityImg">
-              <img src={HieuThu2} alt="" />
-            </div>
-
-            <div className="SongsProsperityName">
-              <div className="Name&ActorSongProsperity">
-                <div className="NameSongProsperity">
-                  <p>Ai Cũng Phải Bắt Đ..</p>
-                </div>
-                <div className="ActorSongProsperity">
-                  <p>HIEUTHUHAI</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="SongsProsperity">
-            <div className="SongsProsperityImg">
-              <img src={HenGapDuoiAT} alt="" />
-            </div>
-
-            <div className="SongsProsperityName">
-              <div className="Name&ActorSongProsperity">
-                <div className="NameSongProsperity">
-                  <p>Hẹn Gặp Dưới Ánh..</p>
-                </div>
-                <div className="ActorSongProsperity">
-                  <p>HIEUTHUHAI</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="TitleDetails">
-          <div className="TilteDT">
-            <h1>Fan cũng thích</h1>
-          </div>
-        </div>
-
-        <div className="AnotherArtist">
-          <div className="AnotherArtistA">
-            <div className="AnotherArtistImg">
-              <img src={Andree} alt="" />
-            </div>
-
-            <div className="AnotherArtistName">
-              <div className="Name&ActorAnotherArtist">
-                <div className="NameAnotherArtist">
-                  <p>Andree Right Hand</p>
-                </div>
-                <div className="ActorAnotherArtist">
-                  <p>Nghệ sĩ</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="AnotherArtistA">
-            <div className="AnotherArtistImg">
-              <img src={WokeUp} alt="" />
-            </div>
-
-            <div className="AnotherArtistName">
-              <div className="Name&ActorAnotherArtist">
-                <div className="NameAnotherArtist">
-                  <p>WOKEUP</p>
-                </div>
-                <div className="ActorAnotherArtist">
-                  <p>Nghệ sĩ</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="AnotherArtistA">
-            <div className="AnotherArtistImg">
-              <img src={Pliz} alt="" />
-            </div>
-
-            <div className="AnotherArtistName">
-              <div className="Name&ActorAnotherArtist">
-                <div className="NameAnotherArtist">
-                  <p>2pillz</p>
-                </div>
-                <div className="ActorAnotherArtist">
-                  <p>Nghệ sĩ</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div onClick={handleNavigate} className="AnotherArtistA">
-            <div className="AnotherArtistImg">
-              <img src={ObitoA} alt="" />
-            </div>
-
-            <div className="AnotherArtistName">
-              <div className="Name&ActorAnotherArtist">
-                <div className="NameAnotherArtist">
-                  <p>Obito</p>
-                </div>
-                <div className="ActorAnotherArtist">
-                  <p>Nghệ sĩ</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="AnotherArtistA">
-            <div className="AnotherArtistImg">
-              <img src={Rhyder} alt="" />
-            </div>
-
-            <div className="AnotherArtistName">
-              <div className="Name&ActorAnotherArtist">
-                <div className="NameAnotherArtist">
-                  <p>Rhyder</p>
-                </div>
-                <div className="ActorAnotherArtist">
-                  <p>Nghệ sĩ</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="TitleDetails">
-          <div className="TilteDT">
-            <h1>Các bản phát hành thịnh hành của HIEUTHUHAI</h1>
-          </div>
-        </div>
-
-        <div className="MusicProsperity">
-          <div className="SongsProsperity">
-            <div className="SongsProsperityImg">
-              <img src={KhongTheSay} alt="" />
-            </div>
-
-            <div className="SongsProsperityName">
-              <div className="Name&ActorSongProsperity">
-                <div className="NameSongProsperity">
-                  <p>Không Thể Say</p>
-                </div>
-                <div className="ActorSongProsperity">
-                  <p>HIEUTHUHAI</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="SongsProsperity">
-            <div className="SongsProsperityImg">
-              <img src={NguMotMinh} alt="" />
-            </div>
-
-            <div className="SongsProsperityName">
-              <div className="Name&ActorSongProsperity">
-                <div className="NameSongProsperity">
-                  <p>Ngủ một mình</p>
-                </div>
-                <div className="ActorSongProsperity">
-                  <p>HIEUTHUHAI,Negav</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="SongsProsperity">
-            <div className="SongsProsperityImg">
-              <img src={NgheNhuTinhYeu} alt="" />
-            </div>
-
-            <div className="SongsProsperityName">
-              <div className="Name&ActorSongProsperity">
-                <div className="NameSongProsperity">
-                  <p>Nghe Như Tình Yêu</p>
-                </div>
-                <div className="ActorSongProsperity">
-                  <p>HIEUTHUHAI</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="SongsProsperity">
-            <div className="SongsProsperityImg">
-              <img src={HieuThu2} alt="" />
-            </div>
-
-            <div className="SongsProsperityName">
-              <div className="Name&ActorSongProsperity">
-                <div className="NameSongProsperity">
-                  <p>Ai Cũng Phải Bắt Đ..</p>
-                </div>
-                <div className="ActorSongProsperity">
-                  <p>HIEUTHUHAI</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="SongsProsperity">
-            <div className="SongsProsperityImg">
-              <img src={HenGapDuoiAT} alt="" />
-            </div>
-
-            <div className="SongsProsperityName">
-              <div className="Name&ActorSongProsperity">
-                <div className="NameSongProsperity">
-                  <p>Hẹn Gặp Dưới Ánh..</p>
-                </div>
-                <div className="ActorSongProsperity">
-                  <p>HIEUTHUHAI</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="DetailsFooter">
-          <Footer />
-        </div>
+      </div>
+      <div>
+        <PlayingBar />
       </div>
     </div>
   );

@@ -4,13 +4,17 @@
   box-sizing: border-box;
 }
 
+.Nav {
+  height: 535px;
+}
+
 .ContentLeft {
   width: 365px;
 }
 
 .LibraryContent {
   transition: overflow-y 0.3s ease;
-  max-height: 450px; /* Định kích thước tối đa cho phần tử */
+  max-height: 363px; /* Định kích thước tối đa cho phần tử */
   overflow-y: hidden; /* Hiển thị thanh cuộn khi nội dung vượt quá kích thước tối đa */
 }
 

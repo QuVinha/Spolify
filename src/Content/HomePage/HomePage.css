@@ -10,9 +10,13 @@ body {
 
 #main {
   background-color: black;
+}
+
+.ContentHome {
   display: flex;
   color: #fff;
-  padding: 10px 10px;
+  padding: 10px 10px 2px;
+  height: 553px;
 }
 
 .ContentRight {
@@ -21,7 +25,7 @@ body {
   margin-left: 10px;
   border-radius: 8px;
   overflow-y: hidden;
-  max-height: 627px;
+  height: 540px;
   transition: overflow-y 0.3s ease;
 }
 
@@ -52,9 +56,9 @@ body {
 }
 
 .TitleForYou {
-  padding-top: 50px;
+  padding-top: 35px;
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .ContentListFY {
@@ -71,6 +75,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 15px;
+  overflow: hidden;
 }
 
 .ContentFY:hover {
@@ -83,6 +88,7 @@ body {
 
 .ImgContentFY {
   height: 48px;
+  overflow: hidden;
   /* width: 117px; */
 }
 
@@ -98,6 +104,7 @@ body {
   justify-content: space-between;
   padding-left: 15px;
   font-weight: 600;
+  overflow: hidden;
 }
 
 .NameContentFy img {
@@ -111,6 +118,12 @@ body {
   left: 92%;
   transform: translate(-50%, -50%);
   display: none;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  overflow: hidden;
+}
+
+.IconPlay:hover {
+  filter: brightness(0.7);
 }
 
 .ContentFY:hover .IconPlay {
@@ -122,12 +135,12 @@ body {
 }
 
 .FavoriteProgram {
-  padding: 20px 20px;
+  padding: 7px 20px;
 }
 
 .TitleFavorite1 {
   display: flex;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .TitleFavorite {
@@ -161,7 +174,7 @@ body {
 }
 
 .NameFavorite {
-  padding: 10px 15px 20px 15px;
+  padding: 10px 15px 12px 15px;
 }
 
 .TitleName {
